@@ -6,7 +6,7 @@ The proposed method introduces a Poisson Factor Mixture Model for the analysis o
 
 The included files are the following:
 
-- `pfmm_functions.R`
+- `pfmm_functions.R`  
   It contains the core functions implementing the Poisson factor mixture model. 
   The main function requires the following inputs:
   
@@ -15,7 +15,7 @@ The included files are the following:
   - `r`: number of latent variables  
   - `x`: covariate matrix  
   
-  The script includes the routines for model estimation, likelihood evaluation, latent structure handling, and clustering based on posterior probabilities.
+  The script includes the routines for model estimation, likelihood evaluation, latent structure modeling, and clustering based on posterior probabilities.
 
 - `example_data_generation_and_model_run.R`  
   It is an example file illustrating how to generate synthetic count data and how to run the proposed model using the functions provided in `pfmm_functions.R`. The script shows the full procedure, from data generation to model fitting and extraction of results.
