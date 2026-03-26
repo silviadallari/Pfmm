@@ -1,6 +1,6 @@
 This repository contains the R implementation of the methodology presented in:
 
-**A Poisson Factor Mixture Model for the Analysis of Linguistic Competence in Italian University Students’ Writing**
+**A Poisson Factor Mixture Model for the Analysis of Linguistic Competence**
 
 The proposed method introduces a Poisson Factor Mixture Model for the analysis of multivariate count data. The model combines a finite mixture structure to account for unobserved heterogeneity with a latent layer that captures possible dependence among variables.
 
