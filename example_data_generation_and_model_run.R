@@ -117,7 +117,7 @@ for(jj in 1:nrep){
 
 # Examples: ---------------------------------------------------------------
 
-source(pfmm_functions.R)
+source("pfmm_functions.R")
 
 # Example with no covariates: ---------------------------------------------
 
