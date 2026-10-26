@@ -28,7 +28,6 @@ pfmm.em=function(y,k,r,it=100,eps=0.0001,init=NULL,seed=7,pp=gauher(8),maxstep=1
   alpha.0=runif(p,-1,1)
   alpha=cbind(alpha.0,alpha)} else alpha=init$alpha
   
-  ## Identifiability conditions:
   if (r>1) for (i in 2:r) alpha[1:(i-1),(i+1)]=0
   alpha[1,1]=0
   
@@ -158,8 +157,6 @@ pfmm.em.alg=function(y,numobs,r,k,p,it,alpha,w,mu,sigma,eps,lik,pp,maxstep)
       alpha[j,]=opt$estimate}
     
     
-    ## Identifiability corrections:
-    
     alpha[1,1]=0
     
     var.z=temp1+temp2-temp3%*%t(temp3)
@@ -216,7 +213,6 @@ pfmm.em.cov=function(y,k,r,it=500,eps=0.00001,init=NULL,seed=7,pp=gauher(8),maxs
   alpha.0=runif(p,-1,1)
   alpha=cbind(alpha.0,alpha)} else alpha=init$alpha
   
-  ## identifiability conditions:
   if (r>1) for (i in 2:r) alpha[1:(i-1),(i+1)]=0
   alpha[1,1]=0
   
@@ -380,7 +376,6 @@ pfmm.em.alg.cov=function(y,numobs,r,k,p,it,alpha,w,mu,sigma,eps,lik,pp,maxstep,x
       opt=nlm(f=da.max,p=alpha[j,],stepmax=maxstep,y=y[,j],zex=zex,k=k,ps.y=ps.y,p.z.ys=p.z.ys)
       alpha[j,]=opt$estimate}
     
-    ## Identifiability corrections:
     alpha[1,1]=0
     
     var.z=temp1+temp2-temp3%*%t(temp3)
